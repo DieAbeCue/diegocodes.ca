@@ -1,0 +1,284 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    margin-top: 10vh;
+}
+
+header {
+    background-color: #fff;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.special-text {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Alegreya', serif;
+}
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+    font-family: 'Alegreya', serif;
+}
+
+h3 {
+    font-size: 28px;
+    text-align: center;
+    font-family: 'Alegreya', serif;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Alegreya', serif;
+}
+
+label {
+    justify-content: center;
+    display: flex;
+    width: 100%; /* Set a fixed width for all labels */
+    text-align: left;
+}
+
+span {
+    display: flex;
+    width: 120px; /* Adjust the width to your preference */
+    text-align: right;
+    align-items: center;
+    margin-right: 10px; /* Add some spacing between the label and the input */
+}
+
+.Section {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 20vh;
+}
+
+.intro {
+    width: 50%;
+    height: 90%; 
+    float: left; 
+    padding: 15px; /* Adjust padding as needed */
+    box-sizing: border-box;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+}
+
+.tag-portrait {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.portrait {
+    width: 70%; 
+    float: left;
+    padding: 30px;
+    margin: 0 auto; /* Add padding as needed to create space between the image and the content section */
+    box-sizing: border-box;
+}
+
+.tag-line {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 4vh;
+}
+
+.subtitle {
+    height: 80px;
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#portfolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1%;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Style the project containers */
+.project {
+    width: 100%; /* Adjust the width to ensure two projects fit side by side */
+    margin: 1%; /* Reduce the margin to create space between pairs of projects */
+    text-align: left;
+    vertical-align: top;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Clear floats after pairs of projects */
+.project:nth-child(2n+1) {
+    clear: both;
+    margin-left: 0;
+    box-sizing: border-box;
+    text-align: left;
+    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Center the last project if the number of projects is odd */
+.project:last-child {
+    margin: 0 auto;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.project-image {
+    width: 40%;
+    align-self: center;
+}
+
+.project-description {
+    width: 90%;
+    align-self: center;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+.flex-form {
+    justify-content: center; /* Center horizontally within the flex container */
+    align-items: center; /* Center vertically within the flex container */
+    display: flex;
+    flex-direction: column; /* Stack input containers vertically */
+    align-items: center;
+}
+
+.form-box {
+    box-sizing: border-box;
+    width: 40%;
+    background-color: transparent;
+    align-self: center;
+    border: #2684f086 2px solid;
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+.custom-box {
+    height: 200px; 
+}
+
+.custom-input {
+    font-size: 20px;
+    font-family: 'Alegreya', serif;
+}
+
+.dark-mode .custom-input {
+    color: #fff;
+}
+
+.send-button {
+    justify-content: center;
+    align-self: center;
+    display: block;
+}
+
+.logo {
+    width: 15%;
+    height: auto;
+    left: 50;
+    top: 50;
+    position: relative;
+}
+
+.footer-logo {
+    width: 10%;
+    height: auto;
+    left: 0;
+    bottom: 0;
+    position: relative;
+    order: 1;
+}
+
+.p1 {
+    text-align: center;
+    order: 2; /* Center text in the middle */
+} 
+
+/* Style for the links on the right */
+.p2 {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    order: 3; /* Place the links on the right */
+}
+
+.dark-mode-button {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: 110;
+}
+
+/* Dark mode styles */
+.dark-mode {
+    background-color: #111;
+    color: #fff;
+}
+.transparent-button {
+    background-color: transparent; /* Set the background color to transparent */
+    border: none; /* Remove the button border */
+    color: white; /* Text color (you can change it to your preference) */
+    padding: 5px 20px; /* Padding around the button text */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer; /* Add a pointer cursor on hover */
+  }
+
+@media (prefers-color-scheme: dark) {
+/* Use dark mode images */
+#modeImage {
+    content: url("sun.png");
+    }
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10%;
+    background-color: #ffffff; /* Change this to your preferred background color */
+    padding: 10px; /* Adjust the padding as needed */
+    z-index: 100; /* To ensure the header stays on top of other elements */
+    overflow: visible;
+}
+
+.sticky-header.sticky {
+    position: fixed;
+    top: 0;
+    background-color: #ffffff; /* Background color for the sticky header */
+    padding: 10px;
+}
+
+.dark-mode .sticky-header {
+    background-color: #111; /* Dark mode background color */
+    color: #fff; /* Dark mode text color */
+}
+
