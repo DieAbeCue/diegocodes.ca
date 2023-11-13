@@ -1,9 +1,14 @@
+html{
+    font-size: 64%;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #fff;
     margin: 0;
     padding: 0;
     margin-top: 10vh;
+    font-size: 1.6rem;
 }
 
 header {
@@ -15,33 +20,37 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
 }
 
 .special-text {
     font-family: 'Orbitron', sans-serif;
+    margin: 5.0rem;
+    text-align: center;
   }
 
 h1 {
-    font-size: 40px;
+    font-size: 4.0rem;
     text-align: center;
     font-family: 'Alegreya', serif;
+    padding-top: 10vh;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 3.6rem;
     text-align: center;
     font-family: 'Alegreya', serif;
 }
 
 h3 {
-    font-size: 28px;
+    font-size: 2.8rem;
     text-align: center;
     font-family: 'Alegreya', serif;
+    line-height: 3rem; 
+    height: 6rem; 
 }
 
 p {
-    font-size: 20px;
+    font-size: 2.0rem;
     font-family: 'Alegreya', serif;
 }
 
@@ -58,17 +67,25 @@ span {
     text-align: right;
     align-items: center;
     margin-right: 10px; /* Add some spacing between the label and the input */
+    font-size: 1.6rem;
+    font-family: 'Alegreya', serif;
 }
 
 .Section {
     width: 100%;
-    height: 100vh;
-    margin-bottom: 20vh;
+    min-height: 100vh;
+    margin-bottom: 10vh;
+}
+
+.first {
+    width: 100%;
+    min-height: 100vh;
+    margin-bottom: 0;
 }
 
 .intro {
     width: 50%;
-    height: 90%; 
+    min-height: 90%; 
     float: left; 
     padding: 15px; /* Adjust padding as needed */
     box-sizing: border-box;
@@ -94,16 +111,13 @@ span {
 }
 
 .tag-line {
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    font-size: 4vh;
+    font-size: 3.5rem;
 }
 
 .subtitle {
-    height: 80px;
+    min-height: 80px;
     width: 100%;
-    padding: 40px;
+    padding-top: 40px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -183,7 +197,7 @@ span {
 }
 
 .custom-input {
-    font-size: 20px;
+    font-size: 2.0rem;
     font-family: 'Alegreya', serif;
 }
 
@@ -198,15 +212,14 @@ span {
 }
 
 .logo {
-    width: 15%;
-    height: auto;
-    left: 50;
-    top: 50;
-    position: relative;
+    position: absolute;
+    height: 60%;
+    width: auto;
+    left: 0;
 }
 
 .footer-logo {
-    width: 10%;
+    width: 13%;
     height: auto;
     left: 0;
     bottom: 0;
@@ -229,9 +242,10 @@ span {
 
 .dark-mode-button {
     position: absolute;
-    top: 0;
-    right: 10px;
+    top: 1vh;
+    right: 4vh;
     z-index: 110;
+    height: 60%;
 }
 
 /* Dark mode styles */
@@ -243,13 +257,10 @@ span {
     background-color: transparent; /* Set the background color to transparent */
     border: none; /* Remove the button border */
     color: white; /* Text color (you can change it to your preference) */
-    padding: 5px 20px; /* Padding around the button text */
-    text-align: center;
-    text-decoration: none;
     display: inline-block;
-    font-size: 16px;
     margin: 10px 2px;
     cursor: pointer; /* Add a pointer cursor on hover */
+    margin-right: 2vh;
   }
 
 @media (prefers-color-scheme: dark) {
@@ -263,7 +274,7 @@ span {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 10%;
+    height: 10vh;
     background-color: #ffffff; /* Change this to your preferred background color */
     padding: 10px; /* Adjust the padding as needed */
     z-index: 100; /* To ensure the header stays on top of other elements */
@@ -282,3 +293,58 @@ span {
     color: #fff; /* Dark mode text color */
 }
 
+@media (orientation: portrait) and (max-width: 800px) {
+    html{
+        font-size: 65%;
+    }
+
+    .sticky-header {
+        height: 7vh;
+    }
+
+    .about-me {
+        flex-direction: column;
+    }
+
+    .intro {
+        width: 100%;
+        order: 0;
+    }
+    .tag-portrait {
+        width: 100%; 
+        order: -1;
+    }
+
+    .custom-input {
+        font-size: 1.6rem;
+    }
+
+    #portfolio {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+
+    label {
+        flex-direction: column;
+    }
+
+    span {
+        width: 80%;
+        order: -1;
+        text-align: start;
+        align-self: center;
+    }
+    .form-box {
+        width: 80%; 
+        order: -0;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 400px) {
+    html{
+        font-size: 60%;
+    }
+}
